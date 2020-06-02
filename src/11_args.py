@@ -19,9 +19,6 @@ print(f1(1, 2))
 
 
 def f2(*args):
-    if type(args) is list:
-        args = tuple(args)
-
     result = 0
     for x in args:
         result += x
@@ -64,8 +61,8 @@ print(f3(8))     # Should print 9
 # Note: Google "python keyword arguments".
 
 # YOUR CODE HERE
-def f4(**args):
-    for key, value in args.items():
+def f4(**kwargs):
+    for key, value in kwargs.items():
         print(f"key: {key}, value: {value}")
 
 
